@@ -299,7 +299,7 @@ class DesertEagle:
             player.vx += -math.cos(aim_angle)*rf
             player.vy += -math.sin(aim_angle)*rf*0.35
             # Lean: atış yönünün tersine eğil
-            player.lean        =  math.cos(aim_angle)*0.9
+            player.lean        = -math.cos(aim_angle) * player.facing * 0.9
             player.recoil_tilt = 0.85
             return True
         return False
